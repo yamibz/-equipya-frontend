@@ -106,4 +106,4 @@ Frontend disponible en `http://localhost:5173`
 ## Autores
 
 Proyecto académico — Desarrollo de Software 2026  
-Yamila Báez · Marcos Ruiz Díaz · Leandro · Sofía
+Yamila Báez · Marcos Ruiz Díaz · Leandro Rodriguez· Valentina Ortigoza
