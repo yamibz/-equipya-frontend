@@ -1,13 +1,20 @@
 # EquipYa — Frontend
 
-Aplicación React/Vite para la plataforma EquipYa, un marketplace híbrido de alquiler de herramientas y contratación de servicios locales.
+Plataforma marketplace híbrida para alquiler de herramientas y contratación de servicios locales. Estética estilo Instagram, pensada para el Gran Buenos Aires.
+
+## 🌐 Links
+
+- **Frontend (producción):** https://equipya-frontend.vercel.app
+- **Backend (producción):** https://equipya-backend.onrender.com
+- **Repositorio backend:** https://github.com/yamibz/-equipya-backend
 
 ## Stack
 
 - **React 18** + **Vite**
-- Estilos en CSS puro (sin frameworks de UI)
+- CSS puro (sin frameworks de UI)
 - Fetch nativo para llamadas al backend
 - Google Fonts (Montserrat + Inter + Syne)
+- Deploy: **Vercel** (frontend) + **Render** (backend) + **MongoDB Atlas** (base de datos)
 
 ## Estructura del proyecto
 
@@ -28,42 +35,41 @@ src/
 └── index.css
 ```
 
-## Funcionalidades implementadas
+## Funcionalidades
 
 ### Autenticación
-- Registro de usuario con validación de campos
-- Inicio de sesión con manejo de errores del servidor
-- Toggle para mostrar/ocultar contraseña
-- Guardado de sesión en `localStorage`
+- Registro con validación de campos
+- Inicio de sesión con manejo de errores
+- Toggle mostrar/ocultar contraseña
+- Sesión guardada en `localStorage`
 - Diseño split: panel de marca + formulario
 
 ### Home / Feed
-- Feed de artículos fetcheado desde `GET /api/articulos`
+- Feed fetcheado desde `GET /api/articulos`
 - Búsqueda en tiempo real por nombre, categoría y ubicación
-- Tabs de categorías: Todo, Productos, Servicios, Cámaras, Herramientas, Electricidad, Plomería
+- Tabs: Todo, Productos, Servicios, Cámaras, Herramientas, Electricidad, Plomería
 - Sidebar con filtros de fecha, zona (km) y precio
-- Cards con imagen, precio, ubicación, rating y botones de like/guardar
-- Banner y modal del asistente IA (estructura lista, pendiente API key)
+- Cards con imagen, precio, ubicación, rating, like y guardar
+- Modal asistente IA
 - Burbuja de chat directo
-- Modal para subir nueva publicación
+- Modal para subir publicación
 
 ### Detalle de producto
 - Galería de imágenes con thumbnails
-- Selector de rango de fechas con cálculo de total
+- Selector de fechas con cálculo de total
 - Card del vendedor con rating y verificación
 - Tabs de descripción, especificaciones y reseñas
-- Botones de reservar y contactar
 
 ### Navegación
 ```
 Login / Registro → Home → ProductDetail
 ```
 
-## Configuración
+## Configuración local
 
 ### Variables de entorno
 
-Crear un archivo `.env` en la raíz del proyecto:
+Crear `.env` en la raíz del proyecto:
 
 ```
 VITE_API_URL=http://localhost:3000
@@ -76,9 +82,9 @@ npm install
 npm run dev
 ```
 
-El frontend corre en `http://localhost:5173`
+Frontend disponible en `http://localhost:5173`
 
-> El backend debe estar corriendo en `http://localhost:3000` para que las llamadas funcionen.
+> El backend debe estar corriendo en `http://localhost:3000`
 
 ## Endpoints utilizados
 
@@ -86,18 +92,18 @@ El frontend corre en `http://localhost:5173`
 |--------|------|-------------|
 | POST | `/api/usuarios/registro` | Registro de usuario |
 | POST | `/api/usuarios/login` | Inicio de sesión |
-| GET | `/api/articulos` | Lista de artículos con filtros |
-| GET | `/api/articulos/:id` | Detalle de un artículo |
+| GET | `/api/articulos` | Lista de artículos |
+| GET | `/api/articulos/:id` | Detalle de artículo |
 
 ## Pendiente
 
-- [ ] Conectar imágenes reales por producto
-- [ ] Activar asistente IA (requiere API key server-side)
-- [ ] Conectar modal "Subir publicación" a `POST /api/articulos`
-- [ ] Implementar filtros de fecha y zona funcionales
+- [ ] Asistente IA funcional (requiere API key server-side)
+- [ ] Conectar modal "Subir publicación" al backend
+- [ ] Filtros de fecha y zona funcionales
 - [ ] Pantalla de perfil de usuario
+- [ ] Imágenes reales subidas por usuarios
 
 ## Autores
 
-Proyecto académico — Desarrollo de Software  
-Universidad / Instituto — 2026
+Proyecto académico — Desarrollo de Software 2026  
+Yamila Báez · Marcos Ruiz Díaz · Leandro · Sofía
