@@ -1,24 +1,20 @@
-# EquipYa — Frontend
+# 🛠️ EquipYa — Frontend
 
-Plataforma marketplace híbrida para alquiler de herramientas y contratación de servicios locales. Estética estilo Instagram, pensada para el Gran Buenos Aires.
+Plataforma marketplace híbrida para alquiler de herramientas y contratación de servicios locales. Pensada para el Gran Buenos Aires con una estética moderna.
 
-## 🌐 Links
+## 🌐 Enlaces
+- **Frontend (producción):** [EquipYa Vercel](https://equipya-frontend.vercel.app)
+- **Backend (producción):** [EquipYa Render](https://equipya-backend.onrender.com)
+- **Repositorio Backend:** [GitHub Backend](https://github.com/yamibz/-equipya-backend)
 
-- **Frontend (producción):** https://equipya-frontend.vercel.app
-- **Backend (producción):** https://equipya-backend.onrender.com
-- **Repositorio backend:** https://github.com/yamibz/-equipya-backend
+## 🚀 Tecnologías y Stack
+- **Core:** React 18 + Vite
+- **Estilos:** CSS puro (sin frameworks de UI) + Google Fonts
+- **Peticiones:** Fetch nativo
+- **Infraestructura:** Vercel (Frontend), Render (Backend), MongoDB Atlas (Base de datos)
 
-## Stack
-
-- **React 18** + **Vite**
-- CSS puro (sin frameworks de UI)
-- Fetch nativo para llamadas al backend
-- Google Fonts (Montserrat + Inter + Syne)
-- Deploy: **Vercel** (frontend) + **Render** (backend) + **MongoDB Atlas** (base de datos)
-
-## Estructura del proyecto
-
-```
+## 📂 Estructura del proyecto
+```text
 src/
 ├── pages/
 │   ├── auth/
@@ -33,77 +29,10 @@ src/
 ├── App.css
 ├── main.jsx
 └── index.css
-```
-
-## Funcionalidades
-
-### Autenticación
-- Registro con validación de campos
-- Inicio de sesión con manejo de errores
-- Toggle mostrar/ocultar contraseña
-- Sesión guardada en `localStorage`
-- Diseño split: panel de marca + formulario
-
-### Home / Feed
-- Feed fetcheado desde `GET /api/articulos`
-- Búsqueda en tiempo real por nombre, categoría y ubicación
-- Tabs: Todo, Productos, Servicios, Cámaras, Herramientas, Electricidad, Plomería
-- Sidebar con filtros de fecha, zona (km) y precio
-- Cards con imagen, precio, ubicación, rating, like y guardar
-- Modal asistente IA
-- Burbuja de chat directo
-- Modal para subir publicación
-
-### Detalle de producto
-- Galería de imágenes con thumbnails
-- Selector de fechas con cálculo de total
-- Card del vendedor con rating y verificación
-- Tabs de descripción, especificaciones y reseñas
-
-### Navegación
-```
-Login / Registro → Home → ProductDetail
-```
-
-## Configuración local
-
-### Variables de entorno
-
-Crear `.env` en la raíz del proyecto:
-
-```
-VITE_API_URL=http://localhost:3000
-```
-
-### Instalación y ejecución
-
-```bash
-npm install
-npm run dev
-```
-
-Frontend disponible en `http://localhost:5173`
-
-> El backend debe estar corriendo en `http://localhost:3000`
-
-## Endpoints utilizados
-
-| Método | Ruta | Descripción |
-|--------|------|-------------|
-| POST | `/api/usuarios/registro` | Registro de usuario |
-| POST | `/api/usuarios/login` | Inicio de sesión |
-| GET | `/api/articulos` | Lista de artículos |
-| GET | `/api/articulos/:id` | Detalle de artículo |
-
-## Pendiente
-
-- [ ] Asistente IA funcional (requiere API key server-side)
-- [ ] Conectar modal "Subir publicación" al backend
-- [ ] Filtros de fecha y zona funcionales
-- [ ] Pantalla de perfil de usuario
-- [ ] Imágenes reales subidas por usuarios
-
-## Autores
-
-Proyecto académico — Desarrollo de Software 2026  
-Yamila Báez · Marcos Ruiz Díaz · Leandro Rodriguez· Valentina Ortigoza
+✨ Funcionalidades principalesAutenticación: Registro con validación, inicio de sesión, sesión persistente (localStorage) y diseño split.Feed / Home: Búsqueda en tiempo real, listado desde /api/articulos, filtros en sidebar y tabs de categorías.Detalle de Producto: Galería con thumbnails, selector de fechas con cálculo de total y perfil del vendedor.⚙️ Instalación y ejecución localClonar el repositorio:Bashgit clone [https://github.com/yamibz/-equipya-frontend.git](https://github.com/yamibz/-equipya-frontend.git)
+Ingresar a la carpeta:Bashcd -equipya-frontend
+Instalar las dependencias:Bashnpm install
+Configurar variables de entorno:
+Crear un archivo .env en la raíz del proyecto con la URL del backend local:Fragmento de códigoVITE_API_URL=http://localhost:3000
+Iniciar el servidor de desarrollo:Bashnpm run dev
+(El frontend estará disponible en http://localhost:5173 y requiere que el backend esté corriendo en http://localhost:3000).🔌 Endpoints consumidosMétodoRutaDescripciónPOST/api/usuarios/registroRegistro de usuarioPOST/api/usuarios/loginInicio de sesiónGET/api/articulosLista de artículosGET/api/articulos/:idDetalle de artículo👥 Autores y DesarrolloProyecto académico — Desarrollo de Software 2026.Equipo: Yamila Báez · Marcos Ruiz Díaz · Leandro Rodriguez · Valentina Ortigoza.Mi contribución directa incluyó la colaboración activa en el desarrollo full stack durante las fases de construcción, implementando componentes en el frontend y configurando la conexión con los endpoints.
