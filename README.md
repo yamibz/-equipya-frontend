@@ -37,10 +37,9 @@ src/
 
 ## ⚙️ Instalación y ejecución local
 
-1. Clonar el repositorio:
-   ```bash
+ Clonar el repositorio:
    git clone [https://github.com/yamibz/-equipya-frontend.git](https://github.com/yamibz/-equipya-frontend.git)
-1. ingresar a la carpeta cd -equipya-frontend
+1. ingresar a la carpeta: cd -equipya-frontend
 2. Instalar las dependencias:
 Bash
 npm install
@@ -57,4 +56,5 @@ POST,/api/usuarios/registro,Registro de usuario
 POST,/api/usuarios/login,Inicio de sesión
 GET,/api/articulos,Lista de artículos
 GET,/api/articulos/:id,Detalle de artículo
-ipo: Yamila Báez · Marcos Ruiz Díaz · Leandro Rodriguez · Valentina Ortigoza.Mi contribución directa incluyó la colaboración activa en el desarrollo full stack durante las fases de construcción, implementando componentes en el frontend y configurando la conexión con los endpoints.
+
+Mi contribución directa incluyó la colaboración activa en el desarrollo full stack durante las fases de construcción, implementando componentes en el frontend y configurando la conexión con los endpoints.
